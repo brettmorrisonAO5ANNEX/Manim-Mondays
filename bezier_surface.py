@@ -54,6 +54,10 @@ class BezierSurface(ThreeDScene):
         return [point_x, point_y, point_z]
 
     def construct(self):
+        surface_eq = MathTex(r"p(u, v) = \sum_{i=0}^n\sum_{j=0}^mB_i^n(u)B_j^m(v)k_{i,j}", font_size=64)
+        B_def = MathTex(r"B_i^n(u) = \binom{n}{i}u^i(1-u)^{n-i}", font_size=64)
+        polynomial_def = MathTex(r"\binom{n}{i} = \frac{n!}{i!(n-i)!}", font_size=64) 
+
         axes = ThreeDAxes()
 
         #add bazier surface and control points
